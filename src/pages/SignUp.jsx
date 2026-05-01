@@ -55,8 +55,8 @@ function SignUp() {
         formData.state,
         formData.country
       );
-      toast.success('Account created! Please verify your email.');
-      navigate('/verify-email');
+      toast.success('Account created! Welcome aboard.');
+      navigate('/dashboard');
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
         toast.error('An account with this email already exists');

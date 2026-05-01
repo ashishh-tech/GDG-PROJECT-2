@@ -23,13 +23,6 @@ function Login() {
     try {
       const result = await login(email, password);
       
-      // check if email is verified
-      if (!result.user.emailVerified) {
-        toast.error('Please verify your email first');
-        navigate('/verify-email');
-        return;
-      }
-
       toast.success('Welcome back!');
       navigate('/dashboard');
     } catch (error) {
