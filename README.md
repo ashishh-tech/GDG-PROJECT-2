@@ -2,13 +2,17 @@
 
 A modern React web application for a digital creative agency — built with React, Tailwind CSS, and Firebase.
 
+**🚀 Live Demo:** [https://ashishh-tech.github.io/GDG-PROJECT-2/](https://ashishh-tech.github.io/GDG-PROJECT-2/)
+
 ## Features
 
 - **Public Pages** — Home, Services, Case Studies, Contact
-- **Authentication** — Sign up, Login, Email Verification (Firebase Auth)
-- **Dashboard** — Projects, Metrics, Clients, Profile management
-- **Responsive** — Works on mobile, tablet, and desktop
-- **User Profiles** — Stored in Firestore with editable fields
+- **Authentication** — Sign up & Login using Firebase Authentication
+- **Dashboard** — Protected routes for Projects, Metrics, Clients, and Profile management
+- **Responsive** — Works perfectly on mobile, tablet, and desktop
+- **User Profiles** — Synchronized in real-time with Cloud Firestore
+
+> **Note on Authentication:** For demonstration purposes and to provide a smoother beginner experience, the email verification requirement has been bypassed. Users can access the dashboard immediately after signing up.
 
 ## Tech Stack
 
@@ -16,30 +20,30 @@ A modern React web application for a digital creative agency — built with Reac
 |---|---|
 | React 19 | Frontend framework |
 | Vite | Build tool & dev server |
-| Tailwind CSS | Styling |
-| Firebase Auth | User authentication |
-| Cloud Firestore | User profile database |
-| React Router DOM | Page routing |
-| React Hot Toast | Notifications |
+| Tailwind CSS v3 | Utility-first styling |
+| Firebase Auth | Secure user authentication |
+| Cloud Firestore | NoSQL database for user profiles |
+| React Router DOM | Client-side routing (`HashRouter` for GitHub Pages support) |
+| React Hot Toast | Toast notifications |
 | React Icons | Icon library |
 
 ## Project Structure
 
-```
+```text
 src/
-├── App.jsx                    # Main app with routes
-├── main.jsx                   # Entry point
-├── index.css                  # Global styles
+├── App.jsx                    # Main app with routing logic
+├── main.jsx                   # Entry point (HashRouter setup)
+├── index.css                  # Global styles & Tailwind directives
 ├── firebase/
-│   └── config.js              # Firebase setup
+│   └── config.js              # Firebase initialization & keys
 ├── context/
-│   └── AuthContext.jsx        # Auth state management
+│   └── AuthContext.jsx        # Global Auth state management
 ├── components/
 │   └── layout/
 │       ├── Header.jsx         # Navigation bar
 │       ├── Footer.jsx         # Footer
-│       ├── DashboardLayout.jsx # Dashboard wrapper
-│       └── Sidebar.jsx        # Dashboard sidebar
+│       ├── DashboardLayout.jsx # Dashboard wrapper (Sidebar & Content)
+│       └── Sidebar.jsx        # Dashboard navigation
 └── pages/
     ├── Home.jsx
     ├── Services.jsx
@@ -47,7 +51,6 @@ src/
     ├── Contact.jsx
     ├── Login.jsx
     ├── SignUp.jsx
-    ├── VerifyEmail.jsx
     └── dashboard/
         ├── DashboardHome.jsx
         ├── Projects.jsx
@@ -56,55 +59,34 @@ src/
         └── Profile.jsx
 ```
 
-## Getting Started
+## Getting Started Locally
 
 ### Prerequisites
 
 - Node.js (v18+)
-- A Firebase project with Email/Password auth enabled
 
 ### Installation
 
 ```bash
-# clone the repo
+# Clone the repository
 git clone https://github.com/ashishh-tech/GDG-PROJECT-2.git
 cd GDG-PROJECT-2
 
-# install dependencies
+# Install dependencies
 npm install
 
-# start dev server
+# Start development server
 npm run dev
 ```
 
-### Firebase Setup
+### Deployment
 
-1. Create a project at [Firebase Console](https://console.firebase.google.com/)
-2. Enable **Authentication** → **Email/Password**
-3. Create a **Firestore Database** in test mode
-4. Add your config to `src/firebase/config.js`
+This project uses `gh-pages` for deployment.
 
-## Pages
-
-| Page | Route | Description |
-|---|---|---|
-| Home | `/` | Landing page with hero, toolkit, projects |
-| Services | `/services` | Agency service offerings |
-| Case Studies | `/case-studies` | Portfolio with stats |
-| Contact | `/contact` | Contact form + info panel |
-| Login | `/login` | Email/password login |
-| Sign Up | `/signup` | Account creation |
-| Verify Email | `/verify-email` | Email verification flow |
-| Dashboard | `/dashboard` | Overview with stats & activity |
-| Projects | `/dashboard/projects` | Project list with filters |
-| Metrics | `/dashboard/metrics` | Analytics & charts |
-| Clients | `/dashboard/clients` | Client directory |
-| Profile | `/dashboard/profile` | Editable user profile |
-
-## Screenshots
-
-### Home Page
-![Home](public/images/hero-architecture.png)
+```bash
+# Build and push to the gh-pages branch automatically
+npm run deploy
+```
 
 ## Author
 
