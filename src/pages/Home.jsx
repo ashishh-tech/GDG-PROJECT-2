@@ -34,7 +34,7 @@ function Home() {
 
         <div className="w-full lg:w-[45%] h-[300px] md:h-[400px] lg:h-[500px]">
           <img 
-            src="/images/hero-architecture.png" 
+            src={`${import.meta.env.BASE_URL}images/hero-architecture.png`} 
             alt="Modern Architecture" 
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -88,14 +88,14 @@ function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition-shadow">
-            <img src="/images/case-interior.png" alt="Lumira Atelier" className="w-full h-[250px] md:h-[350px] object-cover rounded-xl" />
+            <img src={`${import.meta.env.BASE_URL}images/case-interior.png`} alt="Lumira Atelier" className="w-full h-[250px] md:h-[350px] object-cover rounded-xl" />
             <div className="mt-6">
               <p className="font-inter font-semibold text-sm text-primary mb-2">Digital Presence</p>
               <h3 className="font-manrope font-bold text-2xl text-dark">Lumira Atelier</h3>
             </div>
           </div>
           <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition-shadow">
-            <img src="/images/case-furniture.png" alt="Kinetic Retail" className="w-full h-[250px] md:h-[350px] object-cover rounded-xl" />
+            <img src={`${import.meta.env.BASE_URL}images/case-furniture.png`} alt="Kinetic Retail" className="w-full h-[250px] md:h-[350px] object-cover rounded-xl" />
             <div className="mt-6">
               <p className="font-inter font-semibold text-sm text-primary mb-2">E-Commerce</p>
               <h3 className="font-manrope font-bold text-2xl text-dark">Kinetic Retail</h3>

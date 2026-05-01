@@ -67,10 +67,10 @@ function DashboardHome() {
               <p className="font-inter text-sm text-gray mb-4">Brand identity, architecture and high-fidelity web design. Creating a cohesive digital presence for a luxury brand.</p>
               <div className="flex gap-3 mb-4">
                 <div className="w-20 h-16 bg-capsule rounded-lg overflow-hidden">
-                  <img src="/images/case-interior.png" alt="" className="w-full h-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}images/case-interior.png`} alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-20 h-16 bg-capsule rounded-lg overflow-hidden">
-                  <img src="/images/case-furniture.png" alt="" className="w-full h-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}images/case-furniture.png`} alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-20 h-16 bg-dark rounded-lg flex items-center justify-center">
                   <span className="text-white font-inter text-xs font-medium">+5 more</span>

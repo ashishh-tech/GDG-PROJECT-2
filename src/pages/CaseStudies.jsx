@@ -1,9 +1,10 @@
 function CaseStudies() {
+  const base = import.meta.env.BASE_URL;
   const projects = [
-    { image: '/images/case-interior.png', tag: 'UX Research & Design', title: 'Lumira Analytics', description: 'A comprehensive redesign of an enterprise data platform, resulting in a 42% increase in user retention.' },
-    { image: '/images/case_ethereal.png', tag: 'E-Commerce', title: 'Ethereal Watches', description: 'Crafting a premium digital storefront that translates tangible luxury into a seamless online experience.' },
-    { image: '/images/case_velo.png', tag: 'UI / Mobile Design', title: 'Velo Social', description: 'Reimagining social connection through a minimal, frictionless application focused on high-fidelity interaction.' },
-    { image: '/images/case_vertex.png', tag: 'Brand Architecture', title: 'Vertex Capital', description: 'Developing a digital-first brand architecture for a leading venture firm, emphasizing stability and innovation.' },
+    { image: `${base}images/case-interior.png`, tag: 'UX Research & Design', title: 'Lumira Analytics', description: 'A comprehensive redesign of an enterprise data platform, resulting in a 42% increase in user retention.' },
+    { image: `${base}images/case_ethereal.png`, tag: 'E-Commerce', title: 'Ethereal Watches', description: 'Crafting a premium digital storefront that translates tangible luxury into a seamless online experience.' },
+    { image: `${base}images/case_velo.png`, tag: 'UI / Mobile Design', title: 'Velo Social', description: 'Reimagining social connection through a minimal, frictionless application focused on high-fidelity interaction.' },
+    { image: `${base}images/case_vertex.png`, tag: 'Brand Architecture', title: 'Vertex Capital', description: 'Developing a digital-first brand architecture for a leading venture firm, emphasizing stability and innovation.' },
   ];
 
   const stats = [

@@ -1,24 +1,25 @@
 function Services() {
+  const base = import.meta.env.BASE_URL;
   const services = [
     {
       tag: 'Narrative',
       title: 'Script Writing',
       description: "Transforming complex ideas into compelling human narratives. We don't just write scripts; we build the emotional scaffolding for your brand's story.",
-      image: '/images/services_script.png',
+      image: `${base}images/services_script.png`,
       imageFirst: false,
     },
     {
       tag: 'Production',
       title: 'Video Editing',
       description: 'Precision-cut visuals that command attention. Our editing process focuses on rhythm, pacing, and color science to evoke specific responses.',
-      image: '/images/services_video.png',
+      image: `${base}images/services_video.png`,
       imageFirst: true,
     },
     {
       tag: 'Growth',
       title: 'Digital Marketing',
       description: 'Advanced ecosystem integration for absolute autonomy and optimized performance across channels. High quality lead generation.',
-      image: '/images/services_marketing.png',
+      image: `${base}images/services_marketing.png`,
       imageFirst: false,
     },
   ];
